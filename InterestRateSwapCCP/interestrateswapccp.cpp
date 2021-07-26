@@ -178,9 +178,9 @@ ext::shared_ptr<RateHelper> sw20y(new SwapRateHelper(Handle<Quote>(krw20ySW), Pe
 
 std::vector<ext::shared_ptr<RateHelper>> ccpInstruments;
 
-//ccpInstruments.push_back(dp01d);
+ccpInstruments.push_back(dp01d);
 
-//ccpInstruments.push_back(dp03m);
+ccpInstruments.push_back(dp03m);
 
 ccpInstruments.push_back(sw06m);
 
@@ -230,7 +230,7 @@ double tolerance = 1.0e-12;
 // PiecewiseYieldCurve<Discount, Linear>::bootstrap_type(tolerance)));
 
 
-ext::shared_ptr<YieldTermStructure> ccpTermStructure(new PiecewiseYieldCurve<Discount, Linear>(settlementDate, ccpInstruments, Actual365Fixed(),tolerance));
+ext::shared_ptr<YieldTermStructure> ccpTermStructure(new PiecewiseYieldCurve<ZeroYield, Linear>(settlementDate, ccpInstruments, Actual365Fixed(),tolerance));
 
 ccpTermStructure->enableExtrapolation(true);
 
