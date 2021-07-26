@@ -1,54 +1,34 @@
 
-#include "pch.h"
-
 #include <ql/quantlib.hpp>
-
-#include <ql/indexes/ibor/krwcd.hpp>
-
+#include <KRWCD.hpp>
 
 #ifdef BOOST_MSVC
-
 #include <ql/auto_link.hpp>
-
 #endif
 
 
 #include <iostream>
-
 #include <iomanip>
 
 
 using namespace QuantLib;
-
 using namespace std;
-
 using namespace ext;
 
 
 #if defined(QL_ENABLE_SESSIONS)
-
 namespace QuantLib
-
 {
-
-ThreadKey sessionId() { return (); }
-
+    ThreadKey sessionId() { return (); }
 }
-
 #endif
 
 
 int main()
-
-{
-
-try
-
-{
-
-std::cout << std::endl;
-
-
+    {
+    try
+    {
+    std::cout << std::endl;
 /* Inputting 1. Conventions */
 
 Calendar calendar = SouthKorea();

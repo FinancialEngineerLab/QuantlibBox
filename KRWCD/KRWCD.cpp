@@ -18,10 +18,13 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#include <ql/indexes/ibor/krwcd.hpp>
-#include <ql/time/calendars/target.hpp>
-#include <ql/time/daycounters/actual365fixed.hpp>
-#include <ql/currencies/asia.hpp>
+//#include <ql/indexes/ibor/krwcd.hpp>
+//#include <ql/quantlib.hpp>
+//#include <ql/time/calendars/target.hpp>
+//#include <ql/time/calendars/southkorea.hpp>
+//#include <ql/time/daycounters/actual365fixed.hpp>
+//#include <ql/currencies/asia.hpp>
+#include "KRWCD.hpp"
 
 namespace QuantLib {
 
